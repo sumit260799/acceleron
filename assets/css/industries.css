@@ -1,0 +1,585 @@
+.industries-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 5%;
+  height: 100vh;
+  background-color: #0a2a4f; /* Dark blue background */
+  overflow: hidden;
+}
+
+/* .industries-hero-content {
+  max-width: 50%;
+} */
+
+.industries-hero-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--white); /* Light greyish text */
+  text-align: start;
+}
+
+.industries-hero-content h1 {
+  font-size: 2.7rem;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: var(--white);
+  text-align: start;
+}
+
+.industries-cta-btn {
+  padding: 12px 25px;
+  background-color: #ffa700; /* Orange button */
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.industries-cta-btn:hover {
+  background-color: #ff8c00; /* Darker orange on hover */
+}
+
+.industries-hero-image {
+  /* max-width: 50%; */
+  overflow: hidden;
+  object-fit: fill;
+}
+
+.industries-hero-image img {
+  width: 80%;
+  height: auto;
+  float: right;
+  margin-top: 3rem;
+}
+
+@media (max-width: 1024px) {
+  .industries-hero {
+    height: 100vh;
+  }
+  .industries-hero-image {
+    display: none;
+  }
+  .industries-hero-content {
+    max-width: 100%;
+  }
+  .industries-hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .industries-hero-content h1 {
+    font-size: 2rem;
+  }
+  .industries-cta-btn {
+    padding: 10px 20px;
+    background-color: #ffa700; /* Orange button */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+}
+
+/* industries content  */
+
+.industries-content-section {
+  padding: 60px 5%;
+  background-color: #ffffff;
+}
+
+.industries-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.industries-benefits-text {
+  margin-bottom: 4rem;
+}
+.industries-content-image {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.industries-content-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.industries-content-text {
+  flex: 1;
+  padding-left: 50px;
+}
+
+.industries-content-text h1 {
+  font-size: 2rem;
+  color: #0a2a4f;
+  margin-bottom: 20px;
+  text-align: start;
+}
+
+.industries-content-text p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+@media (max-width: 992px) {
+  .industries-content-section {
+    padding: 30px 3%;
+  }
+  .industries-content-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .industries-content-image,
+  .industries-content-text {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  .industries-content-text h1 {
+    font-size: 1.7rem;
+    color: #0a2a4f;
+    margin: 20px 0;
+    padding: 0 !important;
+  }
+  .industries-benefits-text {
+    margin-bottom: 1rem;
+  }
+  .industries-content-text p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+}
+
+/* industries use cases */
+
+.industries-use-cases {
+  text-align: center;
+  padding: 50px 5%;
+}
+.industries-container {
+  margin: 0 auto;
+}
+
+.industries-use-cases h1 {
+  font-size: 2.5rem;
+  color: #1c3a57;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.industries-use-cases p {
+  font-size: 1.15rem;
+  color: #5c6f81;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.use-case-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: all 0.3s ease;
+  border: 1px solid #e4e9f0;
+  position: relative;
+}
+
+.use-case-item:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.use-case-item h2 {
+  font-size: 1.75rem;
+  color: #1c3a57;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.use-case-item p {
+  font-size: 1rem;
+  color: #5c6f81;
+  line-height: 1.5;
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  background-color: #f4f7fa;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.icon-wrapper img {
+  max-width: 50%;
+}
+
+@media (max-width: 768px) {
+  .industries-use-cases {
+    text-align: center;
+    padding: 0px 3%;
+  }
+  .industries-use-cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .use-case-item {
+    padding: 20px;
+  }
+
+  .icon-wrapper {
+    left: 20px;
+  }
+  .industries-use-cases h1 {
+    font-size: 1.7rem;
+    text-align: left;
+  }
+  .industries-use-cases p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .use-case-item h2 {
+    font-size: 1.5rem;
+    color: #1c3a57;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+}
+
+/* industries benefits section */
+.industries-benefits-section {
+  padding: 30px 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--bg-secondary);
+}
+.industries-benefits-container {
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.industries-benefits-container h1 {
+  font-size: 2.3rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.industries-benefits-container p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.industries-benefits-container h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.benefit-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.benefit-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.benefit-item h2 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.benefit-item:hover {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  .industries-benefits-section {
+    padding: 20px 3%;
+  }
+  .container {
+    padding: 20px;
+  }
+
+  .industries-benefits-container h1 {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  .industries-benefits-container h3 {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .industries-benefits-container p {
+    text-align: left;
+  }
+}
+
+/* partners section */
+/* General Styling */
+.industries-partners-section {
+  text-align: center;
+  margin: 50px 0;
+  padding: 20px 5%;
+}
+
+/* Stylish Slider Container */
+.industries-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+/* Slider Track */
+.industries-slider-track {
+  display: flex;
+  align-items: center;
+  width: calc(200%);
+  animation: scroll-left 20s linear infinite;
+}
+
+.industries-slider-track .slide {
+  flex: 0 0 auto;
+  width: 160px;
+  padding: 15px;
+  transition: transform 0.5s ease;
+}
+
+.industries-slider-track .slide img {
+  width: 100%;
+  object-fit: contain;
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.industries-slider-track .slide:hover {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+.industries-slider-track .slide img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.15); /* A stronger zoom on the image hover */
+}
+
+/* Animation Keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .industries-partners-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 15px 3%;
+  }
+
+  .industries-slider-track .slide {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-slider-track .slide {
+    width: 90px;
+  }
+}
+
+/*     <!-- gov-service-section --> */
+
+/* Container */
+/* Container */
+.gov-services-section-container {
+  /* width: 90%; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap; /* Ensures items stack on smaller screens */
+}
+
+/* Intro Text */
+.intro-text {
+  width: 35%;
+  text-align: left;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.intro-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #b0c4de;
+  text-align: left;
+}
+
+.cta-button {
+  background-color: #00c3ff;
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+}
+
+.cta-button:hover {
+  background-color: #1769aa;
+  transform: scale(1.05);
+}
+
+/* Services List */
+.services-list {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.service-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #00c3ff;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #b0c4de;
+}
+
+.gov-services-section {
+  padding: 50px 5%;
+  background-color: #0b2942;
+  color: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .gov-services-section {
+    padding: 30px 3%;
+  }
+
+  .gov-services-section-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .intro-text h1 {
+    font-size: 28px;
+  }
+
+  .intro-text p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  .services-list {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .service-item h3 {
+    font-size: 18px;
+  }
+
+  .service-item p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-text h1 {
+    font-size: 24px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item h3 {
+    font-size: 18px;
+  }
+
+  .service-item p {
+    font-size: 14px;
+  }
+}

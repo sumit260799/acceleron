@@ -1,0 +1,354 @@
+/* Hero Section */
+.about_hero-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-landing/about-overview.gif") no-repeat center
+      center/cover;
+  padding: 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Animation */
+.about_hero-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 107, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  animation: rotateBG 15s linear infinite;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+@keyframes rotateBG {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.abouts {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 2; /* Ensure text is above background */
+}
+
+.about_hero_text {
+  text-align: left;
+  color: #fff;
+  width: 100%; /* Full-width text */
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.about_hero_text h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  background: none; /* Removed the text gradient */
+  color: #fff;
+  text-align: left;
+}
+
+.about_hero_text p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero_btn {
+  /* padding: 15px 45px; */
+  background: linear-gradient(135deg, var(--ac-color), var(--ac-color-hover));
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Add inner gradient effect */
+.hero_btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.6s ease;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.hero_btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.5;
+}
+
+.hero_btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, var(--ac-color-hover), var(--ac-color));
+}
+
+/* Add border animation on hover */
+.hero_btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  /* background: linear-gradient(180deg, transparent, #fff, transparent); */
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+
+.hero_btn:hover::after {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .about_hero_text h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about_hero-section {
+    padding: 0 50px;
+  }
+
+  .about_hero_text h1 {
+    font-size: 2rem;
+  }
+
+  .about_hero_text p {
+    font-size: 1.2rem;
+  }
+
+  .hero_btn {
+    /* padding: 12px 35px; */
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about_hero_text h1 {
+    font-size: 2rem;
+  }
+
+  .about_hero_text p {
+    font-size: 1.1rem;
+  }
+
+  .hero_btn {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Industries Landing Section */
+/* General Styles */
+.industries-landing {
+  padding: 60px 5%;
+  background: linear-gradient(135deg, #e0f7fa, #fff);
+}
+
+/* Tabs */
+.tabs {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: var(--ac-color);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.tabs button.active {
+  background-color: var(--ac-color);
+}
+
+.tabs button:hover {
+  background-color: var(--ac-color);
+  transform: scale(1.05);
+}
+
+/* Card Container */
+.industries-landing-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: start;
+  align-items: start;
+  gap: 30px;
+  padding: 0 10px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .industries-landing-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .industries-landing-card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Card Styling */
+.industries-landing-card {
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Responsive width */
+  max-width: 400px; /* Max width for larger screens */
+  min-width: 250px; /* Min width for smaller screens */
+  margin: 4rem auto; /* Center align card horizontally */
+}
+
+.industries-landing-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+}
+
+.industries_card_body {
+  width: 85%;
+  margin: auto;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 280px;
+  z-index: 50;
+  border-radius: 15px;
+  box-shadow: 0px 20px 25px -15px rgba(0, 0, 0, 0.3);
+}
+.industries-landing-card h2 {
+  font-size: 20px;
+  color: #333;
+  margin: 20px 15px 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.industries-landing-card p {
+  font-size: 12px;
+  margin: 0 15px 15px;
+  color: #666;
+}
+
+/* Full text hidden by default */
+.industries_card_body .full-text {
+  color: #1f2937;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show only 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  position: relative;
+}
+.industries_card_body .full-text span {
+  color: #fc6976; /* Color of the "Read more" link */
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0; /* Position at the bottom */
+  right: 0;
+  background: white;
+  padding-left: 0.2rem;
+  margin-left: 0.2rem;
+}
+.industries_card_body .full-text::after {
+  content: ""; /* Add ellipsis after truncated text */
+  position: absolute;
+  bottom: 0;
+  right: 5rem; /* Adjust to give space for the "Read more" link */
+  margin-right: 2rem;
+}
+.toggle-text {
+  margin: 15px;
+}
+.industries-landing-btn {
+  background-color: var(--ac-color);
+  color: #fff !important;
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0 15px;
+  font-family: "Montserrat", system-ui;
+  a {
+    color: #fff;
+  }
+}
+.industries-landing-btn:hover {
+  background-color: var(--red);
+  transition-duration: 0.5ms;
+}
+@media (max-width: 420px) {
+  .industries-landing-card h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 20px 15px 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  .industries-landing-card p {
+    font-size: 12px;
+    margin: 0 15px 15px;
+    color: #666;
+  }
+}

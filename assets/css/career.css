@@ -1,0 +1,331 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --black: #000;
+  --white: #fff;
+  --blue: #333f6d;
+  --red: #e63e44;
+  --gray: gray;
+  --light-blue: rgb(196, 210, 255);
+  --bg-color: #f3f6fea5;
+  --ac-color: #232f61;
+  --ac-color-hover: #202f69;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Montserrat', system-ui;
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.custom-heading {
+  font-size: 2rem;
+  color: #000;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  /* margin: 0rem 0; */
+}
+/* //........................................ */
+
+/* General reset */
+
+/* Hero Section Styling */
+.hero-section {
+  height: 85vh;
+  background: url('../images/career/career.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+  z-index: 0;
+  transition: background 0.3s ease-in-out;
+}
+
+.hero-content {
+  color: white;
+  position: relative;
+  text-align: start;
+  max-width: 50%;
+  z-index: 1;
+  text-align: left;
+  padding: 20px 5%;
+  animation: fadeIn 1.5s ease-out forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.hero-content h1 {
+  font-size: 44px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Subtle text shadow */
+  text-align: start;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+/* Hover effect for the section */
+.hero-section:hover::before {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 1200px) {
+  .hero-content {
+    max-width: 80%;
+  }
+  .hero-content h1 {
+    font-size: 44px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 95%;
+  }
+  .hero-content h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+/* Animation for smooth content appearance */
+@keyframes fadeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* job search application */
+
+.job-search {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 5%;
+}
+
+.job-search-heading {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem; /* 32px on a 16px base */
+  color: #333;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+  padding: 12px;
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem; /* Responsive font size */
+  margin-right: 10px;
+  outline: none;
+}
+
+.job-listings {
+  margin-top: 30px;
+}
+
+.department {
+  margin-bottom: 50px;
+}
+
+.department h2 {
+  font-size: 1.75rem; /* 28px */
+  margin-bottom: 20px;
+  color: var(--ac-color);
+  position: relative;
+}
+
+.department h2 span {
+  font-size: 1rem; /* 16px */
+  color: #888;
+  margin-left: 10px;
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.job-box {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.job-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.job-box h3 {
+  font-size: 1.2rem; /* 24px */
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.job-box p {
+  font-size: 0.8rem; /* 14px */
+  color: #777;
+}
+
+.job-box:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--blue);
+  transition: all 0.3s ease;
+}
+
+/* Remove the background color of the ::before pseudo-element on hover */
+.job-box:hover:before {
+  background-color: transparent; /* Or 'none' if you want no background */
+}
+
+/* Responsive Font Sizes and Layout Adjustments */
+@media (max-width: 1200px) {
+  .job-search-heading {
+    font-size: 1.75rem; /* 28px */
+  }
+
+  .department h2 {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  .job-box h3 {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .job-box p {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .filters input,
+  .filters select {
+    width: 32%;
+  }
+
+  .job-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .job-search-heading {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  .department h2 {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .job-box h3 {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .job-box p {
+    font-size: 0.8125rem; /* 13px */
+  }
+
+  .filters input,
+  .filters select {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+
+  .job-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-box {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-search-heading {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .department h2 {
+    font-size: 1rem; /* 16px */
+  }
+
+  .job-box h3 {
+    font-size: 1rem; /* 16px */
+  }
+
+  .job-box p {
+    font-size: 0.75rem; /* 12px */
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+  }
+}

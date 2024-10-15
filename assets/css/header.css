@@ -1,0 +1,138 @@
+/*  */
+.main_navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: background-color 0.3s ease-in-out;
+  height: 4.2rem;
+}
+
+.main_navbar .logo img {
+  height: 50px; /* Reduced height for a sleeker look */
+}
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.main_navbar ul li {
+  margin: 0 10px;
+}
+
+.main_navbar ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px; /* Adjusted font size */
+  padding: 8px 10px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.main_navbar ul li a:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  color: var(--ac-color-hover);
+}
+
+.main_navbar .contact-btn {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--ac-color);
+  color: white !important;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  a {
+    color: #fff;
+  }
+}
+
+.main_navbar .contact-btn:hover {
+  background-color: var(--ac-color-hover);
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px;
+  transition: 0.4s;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  /* Changed media query to 1024px */
+  .main_navbar {
+    padding: 15px 3%;
+  }
+
+  .main_navbar ul {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    transition: 0.3s;
+  }
+  .main_navbar .contact-btn {
+    margin-right: 1rem;
+  }
+
+  .main_navbar ul li {
+    margin: 10px 0;
+  }
+
+  .main_navbar ul li a {
+    font-size: 18px; /* Larger font size for mobile */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .main_navbar.active ul {
+    left: 0;
+  }
+
+  /* Hamburger animation */
+  .hamburger.toggle .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.toggle .bar2 {
+    opacity: 0;
+  }
+
+  .hamburger.toggle .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}

@@ -1,0 +1,63 @@
+/* gallery section */
+.gallery-section {
+  margin: 0 auto;
+  padding: 7rem 5%;
+  text-align: center;
+}
+
+.gallery-section p {
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.gallery-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3; /* Ensures all items have the same aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures all images cover the container equally */
+  transition: transform 0.5s ease, filter 0.5s ease;
+  border-radius: 10px; /* Matches grid-item for smoother effect */
+}
+
+/* Hover effect: scaling and slight brightness adjustment */
+.grid-item:hover img {
+  transform: scale(1.1); /* Scales image up slightly */
+  filter: brightness(1.1); /* Makes image a bit brighter */
+}
+
+/* Add a subtle zoom effect for grid-item */
+.grid-item:hover {
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-content {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
+    gap: 15px;
+  }
+  .gallery-section p {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery-content {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+}

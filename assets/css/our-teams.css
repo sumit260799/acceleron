@@ -1,0 +1,340 @@
+/* Styling for the team section */
+.team-section {
+  padding: 50px 5%;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto;
+  gap: 20px;
+}
+
+.team-text-content {
+  flex: 1;
+}
+
+.team-text-content p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.image-content {
+  flex: 1;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile responsive styling */
+@media screen and (max-width: 1024px) {
+  .team-section {
+    padding: 50px 3%;
+  }
+  .team-container {
+    flex-direction: column;
+    text-align: center;
+    margin: 3rem auto;
+  }
+
+  .team-text-content p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .image-content {
+    margin-top: 20px;
+  }
+
+  .image-content img {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+/* Remaining CSS remains unchanged */
+
+.ourteam-section {
+  padding: 50px 5%;
+  background-color: #fff;
+}
+
+.ourteam-section .main-card .cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.main-card .cards .card {
+  width: 260px;
+  background: var(--bg-color);
+  border-radius: 12px;
+  padding: 20px;
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25); */
+  border: 1px solid #e5e7eb;
+  transition: all 0.4s ease;
+}
+
+.cards .card .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cards .card .content .img {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  padding: 3px;
+  background: #ff676d;
+  margin-bottom: 14px;
+}
+
+.card .content .img img {
+  height: 100%;
+  width: 100%;
+  border: 3px solid #ffff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card .content .name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card .content .job {
+  font-size: 20px;
+  color: var(--red);
+}
+
+.card .content .media-icons {
+  margin-top: 10px;
+  display: flex;
+}
+
+.media-icons a {
+  text-align: center;
+  line-height: 33px;
+  height: 35px;
+  width: 35px;
+  margin: 0 4px;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: var(--ac-color);
+  transition: all 0.3s ease;
+}
+
+.media-icons a:hover {
+  color: var(--ac-color);
+  background-color: #fff;
+  border-color: var(--ac-color);
+}
+.ourteam-section p {
+  text-align: right;
+}
+.ourteam-section p a i.fas.fa-arrow-right {
+  margin-left: 5px; /* Adds a small gap between "view-more" and the arrow */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.ourteam-section p a:hover i.fas.fa-arrow-right {
+  transform: translateX(
+    5px
+  ); /* Move the arrow slightly to the right on hover */
+}
+
+@media (max-width: 1200px) {
+  .ourteam-section {
+    padding: 20px 3%;
+  }
+
+  .ourteam-section .main-card .cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .ourteam-section .main-card .cards .card {
+    width: 250px;
+    border-radius: 12px;
+    padding: 18px;
+    transition: all 0.4s ease;
+  }
+
+  .cards .card .content .img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding: 3px;
+    background: #ff676d;
+    margin-bottom: 14px;
+  }
+
+  .card .content .img img {
+    height: 100%;
+    width: 100%;
+    border: 3px solid #ffff;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .card .content .name {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .card .content .job {
+    font-size: 18px;
+    color: var(--red);
+  }
+
+  .card .content .media-icons {
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .media-icons a {
+    text-align: center;
+    line-height: 30px;
+    height: 32px;
+    width: 32px;
+    margin: 0 4px;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: var(--ac-color);
+    transition: all 0.3s ease;
+  }
+
+  .media-icons a:hover {
+    color: var(--ac-color);
+    background-color: #fff;
+    border-color: var(--ac-color);
+  }
+  .ourteam-section p {
+    text-align: right;
+  }
+  .ourteam-section p a i.fas.fa-arrow-right {
+    margin-left: 5px; /* Adds a small gap between "view-more" and the arrow */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .ourteam-section p a:hover i.fas.fa-arrow-right {
+    transform: translateX(
+      5px
+    ); /* Move the arrow slightly to the right on hover */
+  }
+}
+@media (max-width: 580px) {
+  .ourteam-section {
+    padding: 20px 3%;
+  }
+
+  .ourteam-section .main-card .cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .ourteam-section .main-card .cards .card {
+    width: 150px !important;
+    border-radius: 12px;
+    padding: 12px;
+    transition: all 0.4s ease;
+  }
+
+  .cards .card .content .img {
+    height: 100px !important;
+    width: 100px !important;
+    border-radius: 50%;
+    padding: 3px;
+    background: #ff676d;
+    margin-bottom: 14px;
+  }
+
+  .card .content .img img {
+    height: 100%;
+    width: 100%;
+    border: 3px solid #ffff;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .card .content .name {
+    font-size: 15px !important;
+    font-weight: 500;
+  }
+
+  .card .content .job {
+    font-size: 12px !important;
+    color: var(--red);
+  }
+
+  .card .content .media-icons {
+    margin-top: 10px;
+    display: flex !important;
+  }
+
+  .media-icons a {
+    border: 2px solid rgb(223, 131, 131);
+    text-align: center !important;
+    line-height: 25px !important;
+    height: 20px !important;
+    width: 20px !important;
+    margin: 0 4px !important;
+    font-size: 10px !important;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: var(--ac-color);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .media-icons a:hover {
+    color: var(--ac-color);
+    background-color: #fff;
+    border-color: var(--ac-color);
+  }
+  .ourteam-section p {
+    text-align: right;
+  }
+  .ourteam-section p a i.fas.fa-arrow-right {
+    margin-left: 5px; /* Adds a small gap between "view-more" and the arrow */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .ourteam-section p a:hover i.fas.fa-arrow-right {
+    transform: translateX(
+      5px
+    ); /* Move the arrow slightly to the right on hover */
+  }
+}

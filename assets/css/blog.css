@@ -1,0 +1,138 @@
+/* ................................................... */
+
+/* Blog Section */
+.blog-section {
+  width: 100%;
+  padding: 90px 5%;
+}
+
+.main-header {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Ensures elements wrap on smaller screens */
+}
+
+.main-header img {
+  width: 36%;
+  border-radius: 8px;
+  max-width: 100%; /* Ensures the image scales on smaller screens */
+}
+
+.header-text {
+  width: 60%;
+  cursor: pointer;
+}
+
+.header-text h1 {
+  font-size: 24px;
+  margin-bottom: 0.8rem;
+  color: var(--black);
+  text-align: left;
+}
+.header-text h1:hover {
+  color: var(--red);
+}
+.header-text p {
+  color: #555;
+  text-align: left;
+}
+
+/* Latest News Section */
+.latest-news {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.latest-news h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.news-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.news-item h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  color: var(--black);
+}
+
+.news-item h3:hover {
+  color: var(--red) !important;
+  cursor: pointer;
+}
+
+.news-item p {
+  color: #000000;
+}
+
+.see-all {
+  width: 100%;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.see-all a {
+  text-decoration: none;
+  color: var(--ac-color);
+  font-weight: bold;
+}
+
+/* Responsive Styling for Main Header */
+@media screen and (max-width: 768px) {
+  .main-header {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    text-align: center;
+  }
+
+  .main-header img {
+    width: 100%; /* Make the image smaller on smaller screens */
+    margin-bottom: 20px; /* Add space between image and text */
+  }
+
+  .header-text {
+    width: 100%; /* Ensure the text takes full width on smaller screens */
+  }
+
+  .header-text h1 {
+    font-size: 20px; /* Slightly reduce the font size on smaller screens */
+  }
+
+  .header-text p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-header img {
+    width: 100%; /* Image takes full width on very small screens */
+  }
+
+  .header-text h1 {
+    font-size: 18px; /* Further reduce the font size */
+  }
+
+  .header-text p {
+    font-size: 14px;
+  }
+}

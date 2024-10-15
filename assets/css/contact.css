@@ -1,0 +1,234 @@
+/* Container and layout */
+.contact-section {
+  display: flex;
+  max-width: 100%;
+  padding: 20px 5%;
+  margin: 50px auto;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(135deg, #004da3, #0464cc);
+}
+
+/* Left Section */
+.left-section {
+  color: white;
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border-radius: 10px 0 0 10px;
+}
+
+.left-section h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.left-section .image {
+  width: 100%;
+  border-radius: 8px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1;
+  padding: 20px 0;
+  background-color: #f9f9f9;
+  border-radius: 0 10px 10px 0;
+}
+
+.right-section h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-top: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #004da3;
+}
+
+input[type="date"],
+select {
+  padding: 10px;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+}
+
+.phone-input .flag-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--ac-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 77, 163, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+  /* background-color: #0464cc; */
+  box-shadow: 0 6px 14px rgba(0, 77, 163, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    margin: 20px auto;
+  }
+
+  .left-section {
+    background: none; /* Remove background on small screens */
+    padding: 20px 0;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .left-section h1 {
+    font-size: 24px;
+    margin: 20px;
+  }
+
+  .right-section {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .left-section .image {
+    display: none; /* Hide the image on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .submit-button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* //....................... */
+/* contact questions */
+.contact-questions {
+  padding: 50px 5%;
+  background-color: #fff;
+}
+
+.custom-heading {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* Adjust the space between the cards */
+}
+
+.contact-cards .card {
+  border: 2px solid #d1d5db; /* Thicker border */
+  border-radius: 12px; /* Smoother corner radius */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  background-color: transparent; /* No background color */
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.contact-cards .card .card-items {
+  display: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-cards .card h3 {
+  font-size: 22px;
+  color: var(--ac-color);
+  margin-bottom: 15px;
+}
+
+.contact-cards .card p {
+  font-size: 15px;
+  color: #555;
+  margin: 5px 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.contact-cards .card p i {
+  margin-right: 10px;
+  color: var(--ac-color);
+}
+
+.contact-cards .card a {
+  color: var(--ac-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-cards .card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact-cards {
+    grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablet size */
+  }
+}
