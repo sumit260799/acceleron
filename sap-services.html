@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sumit</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/products.css" />
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/sap-services.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
     <!-- Updated Font Awesome Link -->
@@ -20,56 +23,47 @@
       integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMUPVy38/BCYDn6Tk5ll9MG7slhniP3JwAO2EAs"
       crossorigin="anonymous"
     />
+    <!-- AOS Library for Scroll Animations -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navbar -->
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <img
+    <nav class="main_navbar">
+      <div class="logo">
+        <a href="#"
+          ><img
             src="https://acceleronsolutions.io/assets/web/images/site-logo.png"
-            alt="Acceleron Logo"
-          />
-        </div>
-        <ul class="nav-links">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/about.html">About us</a></li>
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/gallery.html">Gallery</a></li>
-          <li><a href="#">Industries</a></li>
-          <li><a href="/career.html">Career</a></li>
-          <li><a href="/contact.html">Contact Us</a></li>
-        </ul>
-        <div class="buttons">
-          <a href="#" class="btn get-in-touch">Get in touch</a>
-          <a href="#" class="btn partner-with-us">Partner With Us</a>
-        </div>
-        <!-- Hamburger menu icon -->
-        <div class="hamburger-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-    </header>
-    <!--=============== HERO ===============-->
-    <section class="about_hero-section">
-      <div class="abouts">
-        <div class="about_hero_text">
-          <h1>
-            Acceleron Solutions, a leading innovator in the tech industry, is
-            dedicated to delivering seamless solutions.
-          </h1>
-
-          <button class="hero_btn">Consult Our Experts</button>
+            alt="Logo"
+        /></a>
+      </div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/products.html">Products</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/industries-landing.html">Industries</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/career.html">Career</a></li>
+      </ul>
+      <div class="nav-items">
+        <button class="contact-btn">
+          <a href="/contact.html">Contact Us</a>
+        </button>
+        <div class="hamburger" id="hamburger">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
         </div>
       </div>
-    </section>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
+    <section class="sap-hero-section">
+      <div class="sap-hero-content">
         <h1>SAP & Acceleron</h1>
         <p>
           For more than 10 years, Acceleron Solutions has collaborated closely
@@ -77,14 +71,14 @@
           disruption with confidence, and excelling in digital transformation
           initiatives.
         </p>
-        <a href="#" class="btn talk-to-experts">Talk To Our Experts</a>
+        <button class="button"><a href="#">Talk To Our Experts</a></button>
       </div>
-      <div class="hero-image">
+      <div class="sap-hero-image">
         <img src="./assets/images/services/hero.png" alt="Hero Image" />
       </div>
     </section>
     <!-- Workflow Section -->
-    <section class="workflow-section">
+    <section class="workflow-section" data-aos="fade-up">
       <div class="content-container">
         <div class="image-container">
           <img
@@ -111,23 +105,18 @@
           </p>
         </div>
       </div>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-      <div class="chat-button">
-        <a href="#">Chat with us</a>
-      </div>
     </section>
     <!-- card section -->
-    <main class="card-five">
-      <div class="container">
-        <h1>SAP Services</h1>
-        <p class="subtitle">
+    <main class="sap-cards-container" data-aos="fade-up">
+      <div class="card-container">
+        <div class="heading_container">
+          <h2>SAP Services</h2>
+        </div>
+        <p class="sap-subtitle">
           Enterprise blockchain services to build a better future.
         </p>
-        <div class="services">
-          <div class="service-card">
+        <div class="sap-services">
+          <div class="sap-service-card">
             <h2>SAP S/4 HANA</h2>
             <p>
               Lorem ipsum is simply dummy text of the printing and typesetting
@@ -135,9 +124,9 @@
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type.
             </p>
-            <a href="#" class="learn-more">➔</a>
+            <a href="#" class="sap-learn-more">➔</a>
           </div>
-          <div class="service-card">
+          <div class="sap-service-card">
             <h2>Salesforce</h2>
             <p>
               Lorem ipsum is simply dummy text of the printing and typesetting
@@ -145,9 +134,9 @@
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type.
             </p>
-            <a href="#" class="learn-more">➔</a>
+            <a href="#" class="sap-learn-more">➔</a>
           </div>
-          <div class="service-card">
+          <div class="sap-service-card">
             <h2>Oracle ERP</h2>
             <p>
               Lorem ipsum is simply dummy text of the printing and typesetting
@@ -155,35 +144,35 @@
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type.
             </p>
-            <a href="#" class="learn-more">➔</a>
+            <a href="#" class="sap-learn-more">➔</a>
           </div>
         </div>
       </div>
     </main>
     <!-- client section -->
-    <div class="clients-section">
+    <div class="sap-clients-section" data-aos="fade-up">
       <h2>Our Clients</h2>
-      <div class="clients">
-        <div class="client">
+      <div class="sap-clients">
+        <div class="sap-client">
           <img src="./assets/images/services/Image 40.png" alt="Pidilite" />
           <p>Pidilite</p>
         </div>
-        <div class="client">
+        <div class="sap-client">
           <img src="./assets/images/services/Image 41.png" alt="Tata Steel" />
           <p>TATA STEEL</p>
         </div>
-        <div class="client">
+        <div class="sap-client">
           <img
             src="./assets/images/services/Container 27.png"
             alt="Cryptoshack"
           />
           <p>cryptoshack</p>
         </div>
-        <div class="client">
+        <div class="sap-client">
           <img src="./assets/images/services/Image 39.png" alt="5ireChain" />
           <p>5ireChain</p>
         </div>
-        <div class="client">
+        <div class="sap-client">
           <img
             src="./assets/images/services/Image 38.png"
             alt="SHIV NADIR SCHOOL"
@@ -193,28 +182,30 @@
       </div>
     </div>
     <!-- consulting section -->
-    <div class="consulting-section">
-      <h1>SAP Consulting</h1>
-      <p class="subtitle">
+    <div class="sap-consulting-section" data-aos="fade-up">
+      <div class="heading_container">
+        <h2>SAP Consulting</h2>
+      </div>
+      <p class="sap-subtitle">
         Real-world success stories revealed - Dive into our successful
         blockchain projects and case studies.
       </p>
-      <div class="consulting-cards">
-        <div class="card-new">
+      <div class="sap-consulting-cards">
+        <div class="sap-card-new">
           <img
             src="./assets/images/services/Image 19.png"
             alt="RISE with SAP"
           />
           <p>RISE with SAP</p>
         </div>
-        <div class="card-new">
+        <div class="sap-card-new">
           <img
             src="./assets/images/services/Image 20.png"
             alt="SAP Managed Services (AMS)"
           />
           <p>SAP Managed Services (AMS)</p>
         </div>
-        <div class="card-new">
+        <div class="sap-card-new">
           <img
             src="./assets/images/services/Image 21.png"
             alt="S/4 HANA Transformation"
@@ -222,86 +213,122 @@
           <p>S/4 HANA Transformation</p>
         </div>
       </div>
-      <button class="view-all">VIEW ALL</button>
+      <div class="read-more">View More...</div>
     </div>
     <!-- benefits -->
-    <div class="container-two">
-      <h1>Benefits of Implementing SAP ERP in your Business</h1>
-      <p class="subtitle">
+    <div class="sap-container-two">
+      <div class="sap-heading_container" data-aos="fade-up">
+        <h2>Benefits of Implementing SAP ERP in your Business</h2>
+      </div>
+      <p class="sap-subtitle" data-aos="fade-up">
         Blockchain application in government projects has the potential to solve
         the legacy pain points and offer the following benefits:
       </p>
-      <p class="subtitle">
-        Our white label neo banking platform simplifies your banking experience
-        with:
-      </p>
-      <div class="benefits-grid">
-        <div class="benefit-item">
+
+      <div class="benefits-grid" data-aos="fade-up">
+        <div class="benefit-item" data-aos="fade-up">
           <div class="icon">🔧</div>
           <p>Value-added tools</p>
         </div>
-        <div class="benefit-item">
+        <div class="benefit-item" data-aos="fade-up">
           <div class="icon">💻</div>
           <p>User-friendly interface</p>
         </div>
-        <div class="benefit-item">
+        <div class="benefit-item" data-aos="fade-up">
           <div class="icon">⏱️</div>
           <p>Real-time tracking</p>
         </div>
-        <div class="benefit-item">
+        <div class="benefit-item" data-aos="fade-up">
           <div class="icon">✅</div>
           <p>Hassle-free operations</p>
         </div>
-        <div class="benefit-item">
+        <div class="benefit-item" data-aos="fade-up">
           <div class="icon">💰</div>
           <p>Money saving options</p>
         </div>
-        <div class="benefit-item">
+        <div class="benefit-item" data-aos="fade-up">
           <div class="icon">🤖</div>
           <p>Autonomous nature</p>
         </div>
-        <div class="benefit-item">
+        <div class="benefit-item" data-aos="fade-up">
           <div class="icon">☁️</div>
           <p>Secure storage</p>
         </div>
-        <div class="benefit-item">
+        <div class="benefit-item" data-aos="fade-up">
           <div class="icon">🗄️</div>
           <p>Protects sensitive data</p>
         </div>
       </div>
     </div>
-    <!-- faq container -->
-    <div class="faq-container">
-      <div class="faq-image">
-        <img
-          src="./assets/images/services/faq.png"
-          alt="Woman working on laptop"
-        />
-      </div>
-      <div class="faq-content">
+    <!-- faq section -->
+    <section class="faq-section">
+      <div class="heading_container" data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
-        <ul>
-          <li>
-            1) How does blockchain improve transparency and accountability in
-            government services? <span class="faq-icon">➤</span>
-          </li>
-          <li>
-            2) How do smart contracts work in government services?
-            <span class="faq-icon">➤</span>
-          </li>
-          <li>
-            3) How can blockchain be used to increase efficiency and reduce
-            costs in government services? <span class="faq-icon">➤</span>
-          </li>
-          <li>
-            4) How can Antier help in implementing blockchain in government
-            services? <span class="faq-icon">➤</span>
-          </li>
-        </ul>
       </div>
-    </div>
+      <div class="faq-container" data-aos="fade-up">
+        <div class="faq-row">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What is blockchain technology?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Blockchain technology is a decentralized digital ledger that
+                records transactions across multiple computers, ensuring that
+                the record is secure, transparent, and immutable.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How can blockchain benefit my business?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Blockchain provides increased security, transparency, and
+                traceability in transactions, making it ideal for industries
+                such as supply chain, finance, healthcare, and more.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-row">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Is blockchain secure?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, blockchain is highly secure due to its decentralized nature
+                and the cryptographic algorithms that protect the data. Once
+                information is recorded, it cannot be easily altered or deleted.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What industries can benefit from blockchain?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Blockchain can benefit industries like finance, supply chain,
+                healthcare, real estate, and many others by providing secure and
+                transparent transactions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- insight-container -->
-    <div class="insights-container">
+    <div class="insights-container" data-aos="fade-up">
       <h2>Spotlight On Insights</h2>
       <div class="insights-cards">
         <div class="insight-card">
@@ -341,10 +368,10 @@
       </div>
     </div>
 
-    <!-- footer section -->
+    <!--=============== FOOTER ===============-->
     <footer class="main-footer">
       <div class="row">
-        <div class="col-md-3">
+        <div class="footer-div">
           <div class="about-content">
             <div class="logo">
               <img src="assets/images/logo.jpg" alt="" />
@@ -370,7 +397,7 @@
           </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="footer-div">
           <div class="heading">
             <h3>Quick Links</h3>
           </div>
@@ -387,7 +414,7 @@
           </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="footer-div">
           <div class="heading">
             <h3>Provided Services</h3>
           </div>
@@ -405,7 +432,7 @@
           </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="footer-div">
           <div class="heading">
             <h3>Location Address</h3>
           </div>
@@ -438,18 +465,39 @@
         <p>&copy; 2024 Your Company Name. All rights reserved.</p>
       </div>
     </footer>
+    <script src="/assets/js/index.js"></script>
     <script>
       // JavaScript to handle the hamburger menu toggle
-      document.addEventListener('DOMContentLoaded', function () {
-        const hamburger = document.querySelector('.hamburger-menu');
-        const navLinks = document.querySelector('.nav-links');
-        const buttons = document.querySelector('.buttons');
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navLinks = document.querySelector(".nav-links");
+        const buttons = document.querySelector(".buttons");
 
-        hamburger.addEventListener('click', function () {
-          navLinks.classList.toggle('show');
-          buttons.classList.toggle('show');
-          hamburger.classList.toggle('active');
+        hamburger.addEventListener("click", function () {
+          navLinks.classList.toggle("show");
+          buttons.classList.toggle("show");
+          hamburger.classList.toggle("active");
         });
+      });
+    </script>
+    <script>
+      // JavaScript for Accordion Functionality
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        item.querySelector(".faq-question").addEventListener("click", () => {
+          item.querySelector(".faq-answer").classList.toggle("active");
+          const icon = item.querySelector(".faq-icon");
+          icon.textContent = icon.textContent === "+" ? "-" : "+";
+        });
+      });
+    </script>
+    <!-- aos js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      // Initialize AOS library for scroll animations
+      AOS.init({
+        duration: 1200,
       });
     </script>
   </body>

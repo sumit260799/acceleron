@@ -270,15 +270,17 @@ a {
 /* faq section */
 
 .faq-section {
-  margin: 50px auto;
-  padding: 50px 5%;
+  margin: 5rem auto;
   background-color: #f9fafb;
+  max-width: 1200px;
+  padding: 0 20px; /* Added padding for small screens */
 }
 
 .faq-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 1.8rem;
 }
 
 .faq-row {
@@ -352,6 +354,10 @@ a {
 }
 
 @media (max-width: 768px) {
+  .faq-section {
+    margin: 3rem auto;
+  }
+
   .faq-row {
     flex-direction: column;
   }
